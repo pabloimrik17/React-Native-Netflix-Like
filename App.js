@@ -4,35 +4,28 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
+    StyleSheet,
+    View
 } from 'react-native';
 
 import List from './src/components/List';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import Slider from './src/components/Slider';
 
 export default class App extends Component<{}> {
-  render() {
-    return (
-        <View style={[styles.container, {flex: 1}]}>
-          <List/>
-        </View>
-    );
-  }
+    render() {
+        return (
+            <View style={[styles.container, {flex: 1}]}>
+                <Slider/>
+                <List/>
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'black'
-  }
+    container: {
+        backgroundColor: 'black'
+    }
 });
